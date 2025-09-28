@@ -68,3 +68,5 @@ public class Automovil extends Vehiculo implements Combustible { }
 ```
 
 ## Reflexión
+
+El polimorfismo es una característica que facilita que un sistema sea fácil de ampliar sin necesidad de modificar el código ya existente. En un diseño orientado a objetos, todos los tipos de vehículos heredan de una clase base llamada `Vehiculo` y, si es necesario, implementan la interfaz `Combustible`. Gracias a esto, el método `procesarVehiculos()` trabaja sobre el tipo abstracto `Vehiculo`, llamando a funciones como `mover()` u `obtenerDetalles()` sin importar de qué clase específica provenga el objeto. Si en el futuro se necesita agregar un nuevo tipo de vehículo, como un `Camión` o una `Patineta`, basta con que este herede de `Vehiculo` y defina los métodos requeridos. Así, el sistema puede procesarlo sin cambios en la lógica principal, reduciendo el mantenimiento y permitiendo que el software crezca de forma ordenada y escalable.
