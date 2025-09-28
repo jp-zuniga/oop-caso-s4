@@ -1,6 +1,6 @@
 package models;
 
-public class Automovil extends Vehiculo implements Combustible {
+public class Automovil extends Vehiculo implements Combustible, Mantenimiento {
     private double nivelCombustible;
 
     public Automovil(String marca, String modelo, int anio, double nivelCombustible) {
@@ -32,5 +32,10 @@ public class Automovil extends Vehiculo implements Combustible {
     @Override
     public double obtenerNivelCombustible() {
         return nivelCombustible;
+    }
+
+    @Override
+    public void realizarMantenimiento() {
+        System.out.println("Revisando componentes de motor...");
     }
 }

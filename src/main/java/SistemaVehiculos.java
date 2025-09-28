@@ -1,7 +1,4 @@
-import models.Automovil;
-import models.Bicicleta;
-import models.Combustible;
-import models.Vehiculo;
+import models.*;
 
 public class SistemaVehiculos {
     public static void procesarVehiculos(Vehiculo[] vehiculos) {
@@ -14,9 +11,11 @@ public class SistemaVehiculos {
                 ((Combustible) v).recargarCombustible();
                 System.out.println("Nivel de combustible: " + ((Combustible) v).obtenerNivelCombustible());
             }
+
             System.out.println();
         }
     }
+
     public static void main(String[] args) {
         // Crear instancias de vehículos
         Vehiculo auto = new Automovil("Toyota", "Corolla", 2020, 40.0);
@@ -30,6 +29,7 @@ public class SistemaVehiculos {
         System.out.println(auto.obtenerDetalles());
         ((Combustible) auto).recargarCombustible();
         System.out.println("Nivel de combustible: " + ((Combustible) auto).obtenerNivelCombustible());
+        ((Mantenimiento) auto).realizarMantenimiento();
 
         System.out.println("\nBICI:");
         bici.mover();
@@ -40,11 +40,11 @@ public class SistemaVehiculos {
         System.out.println(moto.obtenerDetalles());
         ((Combustible) moto).recargarCombustible();
         System.out.println("Nivel de combustible: " + ((Combustible) moto).obtenerNivelCombustible());
+        ((Mantenimiento) moto).realizarMantenimiento();
 
         // Procesar un array de vehículos
         Vehiculo[] vehiculos = {auto, bici, moto};
         System.out.println("\n------- Prueba de Polimorfismo -------");
         procesarVehiculos(vehiculos);
-
     }
 }
