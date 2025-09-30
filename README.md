@@ -8,6 +8,7 @@ Repositorio para el caso de estudio asignado en la semana 4 de la asignatura Met
 - Alicia Massiel Estrada Acevedo
 - Enrique José Taleno Núñez
 - Kevin Alexander Browne Barbosa
+- Angie Zarela Rodríguez Cano
 
 ## Análisis del Código Inicial
 
